@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+	<h:outputStylesheet library="css" name="table-style.css" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>JSF &amp; JPA</title>
+</h:head>
+<h:body>
+
+	<h:form id="form">
+
+		<h:dataTable id="dataTable" value="#{employeeManagedBean.employees}" var="myEmployee"
+			captionStyle="font-size:20px" styleClass="employee-table"
+			headerClass="employee-table-header"
+			rowClasses="employee-table-oddRow,employee-table-evenRow">
+
+			<f:facet name="caption">Employee List</f:facet>
+
+			<h:column>
+				<f:facet name="header">Name</f:facet>
+				#{myEmployee.name}
+			</h:column>
+
+			<h:column>
+				<f:facet name="header">Surname</f:facet>
+				#{myEmployee.surname}	
+			</h:column>
+
+			<h:column>
+				<f:facet name="header">Salary</f:facet>
+				#{myEmployee.salary}
+			</h:column>
+			
+			<h:column>
+				<f:facet name="header">Delete</f:facet>				
+				<h:commandLink value="Delete" action="#{employeeManagedBean.deleteEmployee(myEmployee.id)}" />
+			</h:column>
+
+		</h:dataTable>
+
+		<h3>Add employee</h3>
+		<table id="myTable">
+			<tr>
+				<td>Name:</td>
+				<td><h:inputText id="name" value="#{employeeManagedBean.employee.name}" /></td>
+			</tr>
+			<tr>
+				<td>Surname:</td>
+				<td><h:inputText  id="surname" value="#{employeeManagedBean.employee.surname}" /></td>
+			</tr>
+			<tr>
+				<td>Salary:</td>
+				<td><h:inputText value="#{employeeManagedBean.employee.salary}" /></td>
+			</tr>
+		</table>
+		<p>
+			<h:commandButton value="Add" action="#{employeeManagedBean.addEmployee}"/>				
+		</p>
+	</h:form>
+
+</h:body>
+</html>

@@ -1,0 +1,22 @@
+.employee-table{   
+	border-collapse:collapse;
+}
+
+.employee-table-header{
+	text-align:center;
+	background:#5d9de4;
+	padding:20px;
+	color: white;
+}
+
+.employee-table-oddRow{
+	text-align:center;
+	background:#eaeaea;
+	border-top:1px solid #BBBBBB;
+}
+
+.employee-table-evenRow{
+	text-align:center;
+	background:#F9F9F9;
+	border-top:1px solid #BBBBBB;
+}
