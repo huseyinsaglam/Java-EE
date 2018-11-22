@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>ServletWeek2.2</display-name>
+    <servlet>
+   <servlet-name>ServletContext</servlet-name>
+   <servlet-class>servletcontext.Notes</servlet-class>
+   
+   <init-param>
+     <param-name>javacı</param-name>
+     <param-value>eclipsci</param-value>
+   
+   </init-param>
+   
+   <init-param>
+     <param-name>passwordu</param-name>
+     <param-value>12345678</param-value>
+   </init-param>
+ 
+ </servlet>
+ 
+ <servlet-mapping>
+  <servlet-name>ServletContext</servlet-name>
+  <url-pattern>/hsiURL132</url-pattern>
+ 
+ </servlet-mapping>
+ 
+ <context-param>
+   <param-name>hs</param-name>
+   <param-value>saglam</param-value>
+ </context-param>
+ <context-param>
+  <param-name>yazılım</param-name>
+  <param-value>muhendisi</param-value>
+ </context-param>
+</web-app>
